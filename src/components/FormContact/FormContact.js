@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import s from "./FormContact.module.css";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { AiOutlineUserAdd } from "react-icons/ai";
 
 export default function ContactForm({ onSubmit }) {
@@ -68,6 +68,9 @@ export default function ContactForm({ onSubmit }) {
     </form>
   );
 }
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 // class ContactForm extends Component {
 //   state = {
@@ -75,9 +78,9 @@ export default function ContactForm({ onSubmit }) {
 //     number: "",
 //   };
 
-//   static propTypes = {
-//     onSubmit: PropTypes.func.isRequired,
-//   };
+// static propTypes = {
+//   onSubmit: PropTypes.func.isRequired,
+// };
 
 //   handleChange = (e) => {
 //     const { name, value } = e.currentTarget;
